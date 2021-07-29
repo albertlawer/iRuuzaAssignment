@@ -1,6 +1,8 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get "books" => 'books#index', as: :books
+  get "users" => 'users#index', as: :users
   devise_for :admin_users, controllers: {
     sessions: 'admin_users/sessions'
   }, skip: %w[registrations]
