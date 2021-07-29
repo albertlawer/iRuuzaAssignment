@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :admin_users, only: %w[#<WebFront:0x00007ffa4cf05750>]
 
   namespace :api do
+    namespace :v1 do
+    end
   end
 
   namespace :dashboard do
